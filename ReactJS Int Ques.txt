@@ -1,0 +1,130 @@
+
+1) What is React JS?
+====================
+
+a) A JavaScript library for building user interfaces.
+b) React is used to build single-page applications.
+c) React allows us to create reusable UI components.
+
+2) Why react js is used?
+==========================
+
+a) Flexibility: React is very flexible and can be used to build a variety of applications and UI components. 
+You can use it to build web apps, mobile apps, and even virtual reality experiences.
+b) Great developer experience: React has a simple API and uses JavaScript and HTML to build components. 
+This makes it easy to learn and provides a good developer experience.
+c) Large community: React has a massive community of developers who share knowledge, create libraries, 
+and help support each other. There are many open source React components and libraries available.
+d) Performance: React uses a virtual DOM and intelligently updates only parts of the UI that have changed. 
+This makes React apps fast and efficient.
+e) Testability: React components are self-contained and easily testable. There are many tools available to 
+test React components and apps.
+
+3) How does React Js work? 
+==========================
+
+Server and Client
+CDN delivers the client a single file on the handshake i.e. index.html
+index.html contains bundle.js 
+bundle.js contains a lot of javascript code
+The client has to execute javascript first inorder to understand what the page should look like.
+CDN knows how to present file does not knows how to compute.
+
+4) Features of react js
+=======================
+
+a) JSX
+React uses JSX, which is a JavaScript extension syntax. It allows us to write HTML directly in JavaScript. 
+JSX makes it easier to visualize what the UI will look like. When compiled, JSX expressions turn into React.createElement() 
+calls.
+  const heading = <h1>Hello!</h1>;
+Compiles to:
+  const heading = React.createElement('h1', null, 'Hello!');
+  
+b) Components
+Components are the building blocks of any React app. They allow you to split the UI into independent, reusable pieces.
+  
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>; 
+  }
+  
+c) One-Way Data Binding
+React follows a one-way data flow. Data flows from parent components to child components via props. This makes the data 
+flow predictable and efficient.
+
+d) Virtual DOM
+React uses a virtual DOM instead of modifying the real DOM directly. When state or props change, React efficiently 
+updates the real DOM by only modifying what has changed.
+
+This makes React fast and scalable.
+
+e) Simplicity
+React has a simple API that makes it easy to learn and use. Components are simple JavaScript functions.
+
+
+5) What is jsx
+===============
+
+JSX stands for JavaScript XML. It is a JavaScript syntax extension that allows us to write HTML in React.
+Some key points about JSX:
+a) It makes it easier to write and add HTML in React.
+b) JSX allows us to write HTML elements in JavaScript and place them in the DOM without manually calling React.createElement()
+c) JSX is transformed to React.createElement() calls under the hood by tools like Babel.
+d) We can write JavaScript expressions inside curly braces {} in JSX.
+e) We cannot write if/else statements directly in JSX. We can use conditional expressions like ternary operators.
+f) All attribute names in JSX are written in camelCase.
+
+6) How to create components in React js
+========================================
+
+Components are independent and reusable bits of code.
+Components are the building blocks of any React application. They let you split the UI into independent and reusable pieces.
+There are two ways to create components in React:
+
+Function Components
+Class Components
+
+a) Function Components
+Function components are the preferred way to create components in React. They are simple JavaScript functions that accept 
+props and return JSX.
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+Here Welcome is a function component that accepts props as an argument and returns some JSX.
+
+You can use a function component like this:
+  <Welcome name="Sara" />
+b) Class Components
+
+A class component requires:
+
+A class which extends React.Component
+A render() method that returns JSX
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+  <Welcome name="Sara" />
+Function components are preferred over class components because:
+
+They are cleaner and more concise.
+They allow us to use React Hooks which enable state and lifecycle features without writing a class.
+
+7) What are the advantages of React JS?
+8) Differentiate between real DOM and Virtual DOM
+9) What are froms in React JS
+10) How is React different from React Native 
+
+Q) Hook
+Hooks allow function components to have access to state and other React features. 
+Because of this, class components are generally no longer needed.
+
+
+
+
+
+
+
+

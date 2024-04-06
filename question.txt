@@ -1,0 +1,23 @@
+= usestate tracking
+= controlled and uncontrolled
+= prop drilling A>B>C
+= strict mode
+= passing props  > redux, context api, props, callback fun
+= is redux 3rd party
+= routing
+= settimeout, promise which will have high precedence
+= settimeout and setinterval diff
+= rest operator
+= closure, lexical scoping
+= event bubbling
+= Javascript is symm or asymm
+= semantic tag in html
+= pseudo class and elements
+= meta tag
+= arrow func
+= map, filter and reduce
+
+
+
+
+process.env.

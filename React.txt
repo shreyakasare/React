@@ -1,0 +1,1560 @@
+
+> Callback function
+> componentDidUpdate
+> component lifecycle
+> Event handler
+> Functional Components
+> includes
+> Populate
+> props
+> React Hooks
+> render()
+> this
+> Updating
+> Create React App
+> Props vs State
+> Math.abs()
+> React Contact App
+> Install Bootstrap 
+> Install React Router DOM
+> Install React Toastify
+> Install React 
+> Install React Redux
+> Install Dev tools extension
+> Arrow Functions
+> JSON Server
+> Learn
+> Free Code Camp
+> FreeCodeCamp / React Router 
+> Named Import and export
+> Website
+> Destructuring
+> Use Navigate
+> POSTMAN
+> API endpoint
+> Get, Post, Patch, Delete
+> Lazy Loading
+> Context
+> useState
+> chidlren
+> Framer Motion
+> Styled Components
+
+this
+=====
+
+The less simple answer is that this refers to the object on which this's enclosing method, 
+in this case .render(), is called.
+
+
+props
+=====
+
+> A component's props is an object. It holds information about that component.
+> Props are used to pass data from parent components to child components (down the component
+tree).
+> Essential tool to configure and customize components (like function parameter).
+> With props, parent components control how child components look and work.
+> Anything can be passed as props: single values, arrays, objects, functions event other
+components.
+
+Props is data coming from the outside and can be only updated by the parent component.
+
+Props are read only they are immutable. This is one the react's strict rule.
+If you need to mutate you actually need state.
+                          |
+Mutating props would affect parent, creating side effects (not pure).
+Components have to be pure functions in terms of props and state.
+This allows react to optimize apps, avoid bugs, make apps predictable.
+
+
+State
+=====
+
+State is internal data that can be updated by the components logic.
+
+One way data flow means data flows from parent to child.
+Makes application more predictable and easier to understand.
+Makes applications easier to debug, as we have more control over the data.
+Can be updated by the component itself.
+Updating the state caused component to re-render.
+Used to make components interactive.
+
+Props vs State
+================
+
+Props
+======
+
+1. Props get passed to the component
+2. Function parameters
+3. Props are immutable
+4. Props - Functional Components
+	this.props - Class Components
+5. External data, owned by parent component.
+6. Similar to function parameters.
+7. Read-only.
+8. Receiving new props caused component to re-render. Usually when the parent's state has been updated.
+9. Used by parent to configure child component ("settings"). 
+
+State
+=====
+
+1. State is managed within the components.
+2. Variables declared in the function body.
+3. State can be changed.
+4. useState Hook - Functional Components
+	this.state - Class Components
+
+Event handler
+==============
+
+Whenever you define an event handler that uses this, you need to add
+this.methodName = this.methodName.bind(this) to your constructor function.
+
+Remember, the component lifecycle has three high-level parts:
+==============================================================
+
+Mounting, when the component is being initialized and put into the DOM for the first time.
+Updating, when the component updates as a result of changed state or changed props.
+Unmounting, when the component is being removed from the DOM.
+
+
+
+componentDidMount() is the final method called during the mounting phase. The order is:
+================
+
+constructor
+render()
+componentDidMount()
+
+componentDidUpdate
+===================
+
+componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.userID !== prevProps.userID) {
+    this.fetchData(this.props.userID);
+  }
+}
+
+We've looked at mounting (constructor(), render(), and componentDidMount()). 
+We've looked at unmounting (componentWillUnmount()).
+
+
+Updating
+=========
+An update can be caused by changes to props or state. These methods are called in the following 
+order when a component is being re-rendered:
+
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+render()
+=========
+
+When a component's props or state changes, render() is called.
+
+
+Just like componentDidMount() is a good place for mount-phase setup, 
+componentDidUpdate() is a good place for update-phase work.
+
+Functional Components
+======================
+
+Function components are React components defined as JavaScript functions
+Function components must return JSX
+Function components may accept a props parameter. Expect it to be a JavaScript object
+
+Components
+==========
+
+Component are building blocks of user interfaces.
+
+
+Classes, however, are not simple. They:
+=======================================
+
+are difficult to reuse between components
+are tricky and time-consuming to test
+have confused many developers and caused lots of bugs
+
+React Hooks
+===========
+
+React Hooks, plainly put, are functions that let us manage the internal state of components 
+and handle post-rendering side effects directly from our function components. 
+Hooks don�t work inside classes � they let us use fancy React features without classes. 
+Keep in mind that function components and React Hooks do not replace class components. 
+They are completely optional;
+
+React offers a number of built-in Hooks. 
+A few of these include useState(), useEffect(), useContext(), useReducer(), and useRef(). 
+
+Populate
+=========
+
+To populate simply means to add record to a database.
+
+
+Callback function 
+==================
+
+A callback is a function passed as an argument to another function
+
+This technique allows a function to call another function
+
+A callback function can run after another function has finished
+
+
+includes()
+===========
+
+The includes() method determines whether an array includes a certain value among its entries, 
+returning true or false as appropriate.
+
+includes(searchElement)
+includes(searchElement, fromIndex)
+
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// expected output: true
+
+console.log(pets.includes('at'));
+// expected output: false
+
+spread
+=======
+
+When updating an array in state, we do not just add new data to the previous array. 
+We replace the previous array with a brand new array. 
+This means that any information that we want to save from the previous array needs to be explicitly 
+copied over to our new array. That�s what this spread syntax does for us: ...prev.
+
+
+Create React App
+=================
+
+> npx create-react-app my-app
+> cd my-app 
+> npm start
+
+
+Math.abs()
+===========
+
+The Math.abs() function returns the absolute value of a number. That is, it returns x if x 
+is positive or zero, 
+and the negation of x if x is negative.
+
+React Contact App
+==================
+
+1) App.js - Routing
+2) components folder > Navbar.js
+
+Install Bootstrap
+=================
+
+>>> npm install bootstrap
+>>> import "bootstrap/dist/css/bootstrap.min.css";
+
+Install React Router DOM
+=========================
+
+npm install react-router-dom >>> Routing
+
+Install React Toastify
+=========================
+
+>>> npm install --save react-toastify
+>>> To show errors
+>>> import 'react-toastify/dist/ReactToastify.css';
+
+Install Redux
+=========================
+ 
+npm install redux 
+
+Install React Redux
+======================
+
+npm install react-redux
+
+Install Dev tools extension
+===============================
+
+npm install --save redux-devtools-extension
+
+
+Install redux js toolkit
+===========================
+
+npm install @reduxjs/toolkit
+
+
+Redux Dev Tools
+===============
+
+Ctrl + Shift + P to open Command Palette and type in Redux Devtools,
+
+Arrow Functions
+================
+
+There are differences between arrow functions and traditional functions, as well as some limitations:
+
+const person = {
+  fname:" John",
+  lname:" Doe",
+  age: 25
+};
+
+fname is the property of object person 
+
+1) Arrow functions don't have their own bindings to this, arguments or super, 
+and should not be used as methods.
+
+
+let person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+> To create an object with properties, you use the key:value within the curly braces  (key: first name, value; John)
+> The person object has two properties firstName and lastName with the corresponding values 'John' and 'Doe'.
+> To access a property of an object, you use one of two notations: the dot notation and array-like notation.
+1) The dot notation (.) : e.g. person.firstName
+
+2) Array-like notation ( []) : objectName['propertyName']
+
+3) When a property name contains spaces, you need to place it inside quotes. 
+let address = {
+    'building no': 3960,
+};
+
+4) To access the 'building no' property, you need to use the array-like notation:
+
+address['building no'];
+
+If you use the dot notation, you�ll get an error:
+address.'building no';
+
+5) Modifying the value of a property
+To change the value of a property, you use the assignment operator (=).
+let person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+person.firstName = 'Jane';
+console.log(person);
+
+6) you can add a property to an object after object creation: person.age = 25;
+
+
+7)To delete a property of an object, you use the delete operator:
+delete objectName.propertyName;
+delete person.age;
+
+8) To check if a property exists in an object, you use the in operator:
+propertyName in objectName
+
+> The in operator returns true if the propertyName exists in the objectName.
+let employee = {
+    firstName: 'Peter',
+    lastName: 'Doe',
+    employeeId: 1
+};
+
+console.log('ssn' in employee);
+console.log('employeeId' in employee);
+Code language: JavaScript (javascript)
+
+Output:
+
+false
+true
+
+
+Callbacks
+==========
+
+In JavaScript, functions are first-class citizens. Therefore, you can pass a function to another 
+function as an argument.
+
+
+
+Argument									Parameter
+1) When a function is called, the values that are 			
+	The values which are written at the time of the  function prototype and the passed in the call 
+  are called arguments.				definition of the function.
+
+2) public static int multiply(int a, int b)
+{ return a * b; }
+public static void main(String[] args) {
+        int x = 2;
+        int y = 5;
+        int product = multiply(x, y);
+        System.out.println("PRODUCT IS:" + product);
+}
+	
+3) x and y are called arguments.						a and b are called parameters.
+
+4) During the time of call each argument is always 				Parameters are local variables which 
+are assigned value of the assigned to the parameter in the function definition.				
+arguments when the function is called
+
+>>>>>>>>>>>
+Traditional Anonymous Function
+function (a){
+  return a + 100;
+}
+
+// Arrow Function Break Down
+
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+  return a + 100;
+}
+
+// 2. Remove the body braces and word "return" -- the return is implied.
+(a) => a + 100;
+
+// 3. Remove the argument parentheses
+a => a + 100;
+
+
+>>>>>>>>>>>>>>
+The { braces } and ( parentheses ) and "return" are required in some cases.
+
+For example, if you have multiple arguments or no arguments, you'll need to re-introduce parentheses 
+around the arguments:
+
+// Traditional Anonymous Function
+function (a, b){
+  return a + b + 100;
+}
+
+// Arrow Function
+(a, b) => a + b + 100;
+
+// Traditional Anonymous Function (no arguments)
+let a = 4;
+let b = 2;
+function (){
+  return a + b + 100;
+}
+
+// Arrow Function (no arguments)
+let a = 4;
+let b = 2;
+() => a + b + 100;
+
+>>>>>>>>>>>>
+for named functions we treat arrow expressions like variables:
+
+
+// Traditional Function
+function bob (a){
+  return a + 100;
+}
+
+// Arrow Function
+let bob = a => a + 100;
+
+
+JSON Server (React Project / jserv)
+============
+
+1) A common use of JSON is to exchange data to/from a web server.
+
+2) When receiving data from a web server, the data is always a string.
+
+3) Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+>>> npm init -y (package.json)
+
+>>> npm install -g json-server
+
+>>> package.json    "serve-json": "json-server --watch db.json"
+
+>>> npx json-server --watch db.json
+
+>>> script to start server in package.json:  "serve-json": "json-server --watch db.json"
+
+>>> npx json-server --watch db.json --port 3001
+
+
+//  Query run on address bar
+
+>>> Filtering
+http://localhost:3001/products?category=Electronics&discount.type=shipping
+
+>>> Sort in ascending order
+
+http://localhost:3001/products?_sort=price
+
+>>> Sort in descending order 
+
+http://localhost:3001/products?_sort=price&_order=desc
+
+>>> Sort first 3 data in ascending order and then descending order
+
+http://localhost:3001/products?_sort=price,category&_order=desc,asc
+
+>>> To display data on first page and so on
+
+http://localhost:3001/products?_page=1
+
+>>> To display first 2 records in the array
+
+http://localhost:3001/products?_page=1&_limit=2
+
+[
+  {
+    "id": 1,
+    "title": "Product 1",
+    "category": "Electronics",
+    "price": 4000,
+    "description": "AAA"
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "category": "Electronics",
+    "price": 2000,
+    "description": "ABBBAA"
+  }
+]
+
+http://localhost:3001/products?_page=2&_limit=2
+
+[
+  {
+    "id": 3,
+    "title": "Product 3",
+    "category": "Books",
+    "price": 1000,
+    "description": "ACCCADA"
+  },
+  {
+    "id": 4,
+    "title": "Product 4",
+    "category": "Electronics",
+    "price": 4200,
+    "description": "AVGAA",
+    "discount": {
+      "type": "shipping"
+    }
+  }
+]
+
+Object
+======
+
+>>> An object can be defined as an unordered set of name/value pairs.  
+An object in JSON starts with {left brace} and finish or ends with {right brace}.  
+Every name is followed by: (colon) and the name/value pairs are parted by, (comma).
+
+https://www.javascripttutorial.net/javascript-callback/
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+https://www.javascripttutorial.net/javascript-bind/
+https://www.javascripttutorial.net/javascript-callback/
+
+Learn 
+======
+
+Map, routing, postman, middleware , store , website codesandbox
+1) https://www.freecodecamp.org/news/javascript-es-modules-and-module-bundlers/
+2) https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/
+3) https://www.restapitutorial.com/httpstatuscodes.html
+4) https://www.postman.com/postman/workspace/published-postman-templates/documentation/631643-f695cab7-6878-eb55-7943-ad88e1ccfd65?ctx=documentation
+5) https://learning.postman.com/docs/getting-started/exploring-public-api-network/
+5) children
+6) useReducer, Redux
+7) optional chaining ?.
+
+contact app 
+============
+
+reducer , action reducer
+
+FreeCodeCamp
+=============
+When you create a new project, you'll always see an index.html file in the public folder. All the code you write in your App 
+component which acts as the root component gets rendered to this HTML file. This means that there is only one HTML file where your code will be rendered to.
+
+React Router
+============
+1) The first thing to do after installation is to make React Router available anywhere in your app.
+2) To do this, open the index.js file in the src folder and import BrowserRouter 
+from react-router-dom and then wrap the root component (the App component) in it.
+3.a) Routes acts as a container/parent for all the individual routes that will be created in our app.
+b) Route is used to create a single route. It takes in two attributes:
+> path, which specifies the URL path of the desired component. 
+> element, which specifies the component the route should render.
+4) index.html inside body tag give id as root
+5) In App.js wrap route inside routes.
+6) (*) No Match Found in react.
+7) option - replace
+Normally a call to navigate will push a new entry into the history stack so the user can click 
+the back button to get back to the page. 
+If you pass { replace: true } to navigate then the current entry in the history stack will 
+be replaced with the new one.
+
+An example is when the user clicks a �purchase� button but needs to log in first, 
+after they log in, you can replace the login screen with the checkout screen you wanted 
+them to be at. Then when they click the back button they won�t see the login page again.
+
+8) Router Outlet : https://www.npmjs.com/package/react-router-outlet
+
+9) Index Route - A child route with no path that renders in the parent's outlet at the parent's URL.
+
+Link Tag
+=========
+
+The Link component is similar to the anchor element (<a>) in HTML. Its attribute specifies which path the link takes you to.
+
+Named Import and export
+=========================
+
+This is a named import called A: import { A } from './A'
+It only works if A contains a named export called A: export const A = 42
+
+Website
+=========
+
+1) https://mdbootstrap.com/docs/
+
+
+useParams  30.50
+==========
+
+The react-router-dom package has useParams hooks that let you access the parameters of the current 
+route.
+
+
+>>> Destructuring : https://www.freecodecamp.org/news/how-to-destructure-an-array-in-javascript/
+
+One key difference between the spread operator and array destructuring is that the spread 
+operator unpacks all contents of an array into a comma-separated list. Consequently, 
+you cannot pick or choose which elements you want to assign to variables.
+
+1) Used to extract only the desired properties from the array
+
+   <script>
+        const vehicles = {brand: "BMW" , year: 2020, type: "Car", model : "ABC", color: "black"}
+  
+        myVehicle(vehicles);
+  
+        function myVehicle({type, color, brand, model})
+        {
+        let message = "My" + type + "is a " + color + " " + brand + " " + model +"." ; 
+     
+        document.getElementById("demo").innerHTML = message;
+        }
+      </script>
+
+2) const [, , orange] = fruits
+
+3) Array destructuring is an efficient way to extract multiple values from data that's 
+stored in an array.
+
+example :
+const user = { 
+    'name': 'Alex',
+    'address': '15th Park Avenue',
+    'age': 43
+}
+const { name, age } = user;
+console.log(name, age); // Output, Alex 43
+
+>>> Structuring
+Used to extract all the properties from the array.
+
+>>> Use Navigate
+1) introduced in the React Router v6 to replace the useHistory() hook
+2) It helps to go to the specific URL, forward or backward pages
+3) If you need to navigate programmatically (like after a form submits), 
+this hook gives you an API to do so.
+
+
+POSTMAN
+========
+
+>>> What is an API endpoint?
+An API endpoint is a point at which an API -- the code that allows two software programs 
+to communicate with each other -- connects with the software program. APIs work by 
+sending requests for information from a web application or web server and receiving a 
+response.
+
+
+>>> GET retrieves data from an API.
+>>> POST sends new data to an API.
+>>> PATCH and PUT update existing data.
+>>> DELETE removes existing data.
+
+>>> UseSearchParams
+
+The useSearchParams hook is used to read and modify the query string in the URL for the 
+current location. Like React's own useState hook, useSearchParams returns an array of 
+two values: the current location's search params and a function that may be used to update them.
+
+
+>>> Lazy Loading
+=================
+
+https://www.loginradius.com/blog/engineering/lazy-loading-in-react/#:~:text=In%20essence%2C%20lazy%20loading%20means,it%20at%20the%20same%20time
+
+React Suspense
+===============
+https://17.reactjs.org/docs/concurrent-mode-suspense.html
+
+
+Context
+=======
+
+> React Context is a way to manage state globally.
+
+> Context provides a way to pass data through the component tree without having to pass props 
+down manually at every level.
+
+> React context allows us to pass down and use (consume) data in whatever component we need 
+in our React app without using props.
+
+> Data should be placed on React context that does not need to be updated often.
+
+> Why? Because context was not made as an entire state management system. It was made to make 
+consuming data easier.
+
+> You can think of React context as the equivalent of global variables for our React components.
+
+Props drilling
+===============
+
+Props drilling is a term to describe when you pass props down multiple levels to a nested 
+component, through components that don't need it.
+
+>>> Bypass : to avoid something by going around it:
+
+>>> cumbersome : slow and complicated
+
+>>> useState
+    =========
+
+https://reactjs.org/docs/hooks-state.html
+
+useState is a Hook that lets you add React state to function components.
+
+>>> Provider
+    =========
+
+The <Provider> component makes the Redux store available to any nested components that need 
+to access the Redux store.
+
+Since any React component in a React Redux app can be connected to the store, most applications
+will render a <Provider> at the top level, with the entire app's component tree inside of it.
+
+https://react-redux.js.org/api/provider#react-18-ssr-usage
+
+>>> Chidlren
+
+It is used to display whatever you include between the opening and closing tags 
+when invoking a component.
+
+useState and useReducer : React does not re-render a component when new state is same 
+as old state.
+========================
+
+> useReducer :If you find yourself keeping track of multiple pieces of state that 
+rely on complex logic, useReducer may be useful.
+
+The useReducer Hook accepts two arguments.
+useReducer(<reducer>, <initialState>)
+
+>>> Framer Motion
+
+npm install framer-motion
+
+>>> Styled Components > npm i -styled-components / npm install --save @types/styled-components
+
+>>> React feather > npm i react-feather
+
+>>> Children
+https://stackoverflow.com/questions/49706823/what-is-this-props-children-and-when-you-should-use-it
+
+this.props.children does is that it is used to display whatever you include between 
+the opening and closing tags when invoking a component.
+
+===================================================================
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDlVJ4WJspK1ZZaGL1vt4mG_5GdiJoAtw8",
+  authDomain: "imgupld-c1880.firebaseapp.com",
+  projectId: "imgupld-c1880",
+  storageBucket: "imgupld-c1880.appspot.com",
+  messagingSenderId: "950515325884",
+  appId: "1:950515325884:web:91955f92558595bc0229b9",
+  measurementId: "G-4JYQZ8YNQN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+Firebase steps 
+
+Src > firebaseConfig.js > copy the code from firebase website
+
+Install firebase
+==================
+
+npm install --save react-firebase
+
+Memo 
+=====
+Unnecessary renders do affect performance. To optimize this rendering behaviour we can let react 
+know it should re-render the child component only if its props change. And the way to do is 
+using React.memo().
+
+When a component is wrapped in React.memo(), React renders the component and memoizes the result.
+
+> In React, when a parent component renders, a child component might un-necessarily render.
+> To optimize this behaviour, you can use React.memo and pass in the child component.
+> React.memo will perform a shallow comparison of the previous and new props and re-render the 
+  child component only if the props have changed.
+
+
+Shortcuts
+==========
+
+.button        <div className="button">
+button.btn     <button className="btn">
+a.btn          <a href="" className="btn"></a>
+i.fa           <i className="fa"></i>
+.container     <div className="container"></div>
+input:number
+
+useEffect
+==========
+https://www.freecodecamp.org/news/react-useeffect-absolute-beginners/
+
+The useEffect Hook allows you to perform side effects in your components.
+Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+useEffect accepts two arguments. The second argument is optional.
+
+// 1. import useEffect
+import { useEffect } from 'react';
+
+function MyComponent() {
+  // 2. call it above the returned JSX  
+  // 3. pass two arguments to it: a function and an array
+  useEffect(() => {}, []);
+  
+  // return ...
+}
+    
+
+CSS  
+===
+
+>>> me-auto means "margin end auto". Which is actually:
+margin-right: auto
+me = margin-right and ms = margin-left
+
+>>> direction d-flex justify-content-center : 
+Use d-flex class to enable flexbox in bootstrap and align the items to the desired position.
+
+>>> The Bootstrap grid system has four classes: 
+xs (phones), sm (tablets), md (desktops), and lg (larger desktops).
+
+>>> By default, .btn-primary has white text on a blue background.
+
+>>> m - for classes that set margin
+    p - for classes that set padding
+    t - for classes that set margin-top or padding-top
+b - for classes that set margin-bottom or padding-bottom
+l - for classes that set margin-left or padding-left
+r - for classes that set margin-right or padding-right
+x - for classes that set both *-left and *-right
+y - for classes that set both *-top and *-bottom
+blank - for classes that set a margin or padding on all 4 sides of the element
+
+Clone
+=====
+
+"Cloning" an object in JavaScript means creating a new object with the same properties as the 
+original object. Objects in JavaScript are stored by reference, which means that two variables 
+can point to the same object in memory.
+Modifying one object variable can impact other variables.
+
+Map
+===
+
+> The map() method creates a new array populated with the results of calling a provided 
+function on every element in the calling array.
+
+> In JavaScript, map() is a method of the Array object. It creates a new array by calling a 
+function on every element of the original array and storing the results in a new array. 
+map() returns the new array, and the original array is unchanged.
+
+> map method iterates through all the elements present in an array and returns a new array.
+
+const essentialData = books.map((book) => ({
+    id: book.id,
+   }));
+
+const 
+=====
+
+> const has all the awesome features that let has,
+> variables declared using const are read-only
+>  They are a constant value, which means that once a variable is assigned with const, 
+it cannot be reassigned:
+> use uppercase variable identifiers for immutable values and lowercase or camelCase 
+for mutable values (objects and arrays). 
+
+immutable 
+========= 
+
+value cannot be changed.
+
+NaN  
+=====
+
+If the first character in the string can't be converted into a number, then it returns NaN.
+
+Recursion
+==========
+
+Recursion is the concept that a function that calls itself.
+
+
+unshift
+=======
+
+> The unshift() method adds new elements to the beginning of an array.
+> The unshift() method overwrites the original array
+
+push()
+========
+
+> the push() method adds elements to the end of an array  
+
+pop
+===
+
+> pop() removes an element from the end of an array
+
+shift
+=====
+
+> shift() removes an element from the beginning.
+
+splice()
+=========
+
+> if we want to remove an element from somewhere in the middle / Or remove more than 
+ one element at once? Well, that's where splice() comes in. splice() allows us to do just 
+ that: remove any number of consecutive elements from anywhere in an array.
+> splice() can take up to 3 parameters
+
+var 
+===
+When you declare a variable with the var keyword, it is declared globally, 
+or locally if declared inside a function.
+scope is limited in the function.
+If inside a function var is replaced with let it gives an error: Uncaught referenceerror : var name is not defined.
+
+let 
+===
+When you declare a variable with the let keyword inside a block, statement, 
+or expression, its scope is limited to that block, statement, or expression.
+
+If you never want a variable to change, const is the keyword to use.
+
+If you want to reassign values:
+
+and you want the hoisting behavior, var is the keyword to use
+if you don't want it, let is the keyword for you
+
+Object.freeze 
+==============
+
+> to prevent data mutation.
+> To ensure your data doesn't change
+
+
+readAsDataURL
+==============
+
+https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
+
+Count up
+
+>>> yarn add react-countup
+
+Material Table 
+>>> npm install material-table @material-ui/core --save
+
+
+backticks (`)
+
+Template literals
+===================
+
+https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-strings-using-template-literals
+
+
+Super
+======
+
+Super(): It is used to call the constructor of its parent class. This is required when we need 
+to access some variables of its parent class.
+
+Props
+======
+Props: It is a special keyword that is used in react stands for properties.
+Used for passing data from one component to another. Props data is read-only, 
+which means that data coming from the parent should not be changed by child components.
+
+
+https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/
+
+
+Constructor
+============
+
+The constructor is a method used to initialize an object's state in a class. 
+It automatically called during the creation of an object in a class.
+
+It used for initializing the local state of the component by assigning an object to this.state.
+It used for binding event handler methods that occur in your component.
+
+
+i18n
+=====
+
+Internationalization (i18n) is the process of preparing software so that it can support 
+local languages and cultural settings.
+
+.use()
+======
+
+The use function is there to load additional plugins to i18next.
+
+current
+=======
+
+https://beta.reactjs.org/learn/referencing-values-with-refs
+
+When you want a component to “remember” some information, but you don’t want that
+information to trigger new renders, you can use a ref.
+
+When a piece of information is used for rendering, keep it in state. 
+When a piece of information is only needed by event handlers and changing it doesn’t 
+require a re-render, using a ref may be more efficient.
+
+Debugging
+==========
+
+https://flaviocopes.com/javascript-debugging/
+
+https://flaviocopes.com/react-developer-tools/
+
+https://flaviocopes.com/react-debugging/
+
+Promise
+========
+
+> A promise has three states: pending, fulfilled, and rejected.
+> resolve is used when you want your promise to succeed, and reject is used when you 
+want it to fail. 
+
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+
+> Promises are most useful when you have a process that takes an unknown amount of 
+time in your code (i.e. something asynchronous), often a server request. 
+
+> When you make a server request it takes some amount of time, and after it 
+completes you usually want to do something with the response from the server. 
+This can be achieved by using the then method. The then method is executed 
+immediately after your promise is fulfilled with resolve. Here’s an example:
+
+myPromise.then(result => {
+  
+});
+
+> catch is the method used when your promise has been rejected. It is executed immediately 
+after a promise's reject method is called.
+myPromise.catch(error => {
+  
+});
+
+
+test()
+=======
+
+> The .test() method takes the regex, applies it to a string (which is placed inside the 
+parentheses), and returns true or false if your pattern finds something or not.
+
+let petString = "James has a pet cat.";
+let petRegex = /change/; // Change this line
+let result = petRegex.test(petString);
+
+You can match both cases using what is called a flag. There are other flags but here you'll 
+focus on the flag that ignores case - the i flag. You can use it by appending it to the regex. 
+An example of using this flag is /ignorecase/i. This regex can match the strings ignorecase, 
+igNoreCase, and IgnoreCase.
+
+call()
+=======
+
+1. The call() method invokes a function with a given this value and arguments provided one by one
+2. There is no render method used in functional components.	
+3. Functional component run from top to bottom and once the function is returned it cant be kept alive.
+Functional Components                  	                                      
+A functional component is just a plain JavaScript pure function that accepts props as an 
+argument and returns a React element(JSX).	
+
+Class Components   
+A class component requires you to extend from React. Component and create a render function 
+which returns a React element.
+It must have the render() method returning JSX (which is syntactically similar to HTML)
+	Class component is instantiated and different life cycle method is kept alive and being run and invoked depending on phase of class component.
+Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI.	Also known as Stateful components because they implement logic and state.
+React lifecycle methods (for example, componentDidMount) cannot be used in functional components.	React lifecycle methods can be used inside class components (for example, componentDidMount).
+Hooks can be easily used in functional components to make them Stateful.
+
+example: const [name,SetName]= React.useState(‘ ‘)
+
+It requires different syntax inside a class component to implement hooks.
+
+example: constructor(props) {
+
+   super(props);
+
+   this.state = {name: ‘ ‘}
+
+}
+
+Constructors are not used.	Constructor are used as it needs to store state. 
+
+Higher Order Components
+========================
+
+A HOC is an advanced technique for reusing logic in React components.
+The most interesting part of using higher-order functions is composition. 
+We can write small functions that handle one piece of logic. 
+Then, we can compose complex functions by using the different small functions we have created. 
+This reduces bugs in our code base and makes our code much easier to read and understand.
+
+
+forEach()
+=========
+
+This iterates over every element in an array with the same code, but does not change or 
+mutate the array, and it returns undefined.
+
+Axios
+======
+
+npm i axios
+
+Material Table
+===============
+
+npm i material-table
+
+filter()
+========
+
+> The filter() method creates a shallow copy of a portion of a given array.
+> The filter() method is an iterative method. It calls a provided callbackFn 
+function once for each element in an array, and constructs a new array of 
+all the values for which callbackFn returns a truthy value.
+>callbackFn is invoked only for array indexes which have assigned values. 
+It is not invoked for empty slots in sparse arrays.
+
+JavaScript Array filter() Method is used to create a new array from a given array consisting 
+of only those elements from the given array that satisfy a condition set by the argument method. 
+
+useSelector()
+=============
+
+Allows you to extract data from the Redux store state, using a selector 
+function.
+
+for..in and for..of
+===================
+for..in returns a list of keys on the object being iterated, whereas for..of returns a 
+list of values of the numeric properties of the object being iterated.
+
+for in returns index no and for of returns object values.
+
+Closure
+=======
+
+> Inner function can have access to the outer function variables as well as all the global 
+variables.
+> Function inside function is called as inner function.
+
+Redux
+======
+
+> State container for JavaScript app.
+> Can be used with React, Angular, Vue or vanilla JavaScript.
+
+1. A store that holds the state of your application.
+2. An action that describes the changes in the state of the application.
+3. A reducer which actually carries out the state transation depending on the action.
+
+To update the state it has to emit or dispatch the action, once the action has been dispatched
+the reducer that handles the action updates the current state.
+As soon as the state is updated the value is passed on to the application because the app
+is subscribed to the store.
+
+The function which contains all your state updates is called the reducer. 
+This is because you are reducing the state logic into a separate function. 
+The method you call to perform the operations is the dispatch method.
+
+Action
+======
+
+The only way your application can interact with the store.
+Carry some information from your app to the redux store.
+Plain javascript objects.
+
+An action is an object with the type property.
+An action creater is a function that returns an action.
+
+Reducers
+========= 
+
+> Specify how the app's state changes in response to action sent to the store.
+> Function that accepts state and action as arguments, and returns the next state of the application.
+
+A reducer, or reducer function, is a plain JavaScript function that defines how the current state and 
+an action are used in combination to create the new state.
+
+(previousState, action) => newState
+
+Reducers are functions that take the current state and an action as arguments, and return 
+a new state result. 
+In other words, (state, action) => newState.
+
+Redux store
+============
+
+One store for the entire application
+
+> Holds application state
+> Allows access to state via getState()
+> Allows state to be updated via dispatch(action)
+> Registers listeners via subscribe(listener)
+> Handles unregistering of listeners via the function returned by subscribe(listener) 
+
+
+configureStore
+===============
+
+configureStore sets up a well-configured Redux store with a single function call, 
+including combining reducers, adding the thunk middleware, and setting up the Redux 
+DevTools integration. It also is easier to configure than createStore, because it 
+takes named options parameters.
+
+
+Payload
+========
+
+Payload means Data
+
+document.createElement()
+========================
+
+It creates an HTML element, and we can see all the properties by using console.dir(element), which is a
+method provided by browsers to list all the properties of a particular object.
+
+Redux flow
+==========
+
+Components > Dispatch > Action > Reducers > Central Store > Triggers > Subscription > Passes updated state as props.
+
+component dispatchs an action reaches to reducers, reducers has to power to change state and it goes to central store
+which manages all the state of an application, central store send the trigger to the Subscription and Subscription 
+passes updated state as props to the components and component is re-rendered based on the new state/data. 
+
+Tips
+=====
+
+>>> If you want to render another component in the same page try to make separate component else the 
+other component will open in another page i.e. blank page.
+
+>>> Draggable component refer to project Product Analytics > Alert Dialog Component
+
+Product Analytics
+=================
+
+>>> npm install react-draggable
+
+>>> npm i sweetalert2
+
+
+>>> (New salary – Old Salary) / Old Salary * 100 = Hike percentage.
+
+
+Current Salary : 32000
+New Salary : 38500
+Calculate
+Clear
+
+
+
+//
+Cart Project 
+
+>>> npm i react-bootstrap bootstrap
+
+
+What is Unidirectional Data Flow?
+Unidirectional data flow is a technique that is mainly found in functional reactive programming. 
+It is known as one-way data flow, which means the data has one, and only one way to be transferred to other parts of the 
+application. In essence, this means child components are not able to update the data that is coming from the parent component. 
+In React, data coming from a parent is called props.
+
+Benefits of One-way data binding/Unidirectional Data Flow
+Easier to debug, as we know what data is coming from where.
+Less prone to errors, as we have more control over our data.
+More efficient, as the library knows what the boundaries are of each part of the system.
+
+e.preventDefault()
+==================
+
+The preventDefault() method cancels the event if it is cancelable, meaning that the default
+action that belongs to the event will not occur.
+
+If you have  a field and some value is present on click of the button you dont want the 
+state to get cleared use e.preventDefault it prevents the state from getting cleared.
+
+createSlice
+============
+
+A function that accepts an initial state, an object of reducer functions, and a "slice name", 
+and automatically generates action creators and action types that correspond to the reducers 
+and state.
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
+  reducers: {} 
+}) 
+ 
+jsonplaceholder API's used
+===========================
+
+https://jsonplaceholder.typicode.com/todos
+
+
+axios
+
+1) fetch doesn’t require any imports or 3rd party package.
+1) axios requires 3rd party package.
+
+2) to send fetch api data and to receive the response data it is a 2 step process
+
+e.g 
+fetch(url, {
+  method: "POST",
+  headers: {"Content-Type" : "application/json"},
+  body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(err));
+to send the data in the post request body we have to convert into string JSON.stringify method
+later on if i get any data from newtwork i'll get in string form.
+then i'll have to convert the response in the json() format.
+
+To overcome this we use axios method
+
+axios
+
+axios({
+  url,
+  method: "POST",
+  header: {"name" : "Known", creatorOn: "YouTube"}
+})
+.then(response => console.log(response))
+.catch(err => console.log(err));
+
+the data sent is in the json format and received in the json format.
+
+2) No need for manual error handling in axios
+
+fetch(url)
+.then(response => {
+  if(!response.ok){
+    throw Error(response.statusText)
+  }
+  return response.json();
+})
+.then(data => console.log(data));
+.catch(err => console.log(err));
+
+to throw an error   
+if(!response.ok){
+    throw Error(response.statusText)
+  }
+  return response.json();
+the above line of code has to be written manually.
+
+2) In axios
+axios.get(url)
+.then(response => console.log(response))
+.catch(error => console.log(error));
+
+if we get any error from network catch block throws an error.
+
+3) Easily intercept request/response.
+
+4) Easy request abort setting
+
+axios gives an access to abort the request after particular time
+using the settimeout function
+
+using fetch w'll need to write some logic to abort the request after particular time.
+
+5) Axios has wide browser support.
+
+Fetch only supports Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.1+ 
+This is known as Backward Compatibility.
+
+using axios we can protect our app using Cross-Site Request Forgery (CSRF) by attaching csrf token 
+in header 
+
+6) The Fetch API is a built-in browser method for performing HTTP requests, whereas Axios is an 
+external package we must install in our project before using.
+
+Because the Fetch API is a built-in browser method that returns a Promise, we use the .then() and
+.catch() methods to handle success and failure. 
+
+
+Project steps
+=============
+
+NavBarPanel > for menus on the home page
+
+
+import './App.css';
+
+Outlet
+======
+
+An <Outlet> should be used in parent route elements to render their child route elements. 
+This allows nested UI to show up when child routes are rendered.
+
+The React Router <Outlet/> component (from react-router-dom) is used within the parent 
+route element to indicate where a child route element should be rendered.
+
+REST
+====
+
+"REpresentational State Transfer."
+
+Axios (a promise-based HTTP client) and Fetch API (a browser in-built web API).
+
+
+Interview
+==========
+
+Authentication protocols OIDC OAuth 2.0
+
+Imperative
+==========
+
+Manual DOM element selections and DOM traversing.
+Step-by-step DOM mutations until we react the desired UI.
+
+Declarative
+===========
+
+Describe what UI should look like using JSX, based on current data.
+React is an abstraction away from DOM: we never touch the DOM.
+Instead, we think of the UI as a reflection of the current data.
+
+Links
+=====
+
+https://www.geeksforgeeks.org/how-to-create-a-multi-level-dropdown-navbar-in-react-bootstrap-using-map/
+
+
+Extensions
+==========
+
+Color highlight
+
+Tips
+====
+
+onClick = {handlePrevious()} > calling
+onClick = {handlePrevious} > passing
+
+onClick = {handlePrevious} > if this is the syntax react will call this function immediately,
+use onClick = {()=> handlePrevious()} when the user clicks it will call after the click
+
+>> To move component to a new file right click on it and then refactor.
+
+Project steps
+
+Routes
+======
+
+<Route index path='/frstApp' element={<FirstReactApp />} />
+
+
+Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
+
+Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):
+
+Example
+"use strict";
+x = 3.14;       // This will cause an error because x is not declared
+
+
+Routing
+=======
+
+Refactor
+=========
+
+Right click on the function and refactor, it'll create new file (component)
+
+
+https://codesandbox.io/p/sandbox/react-exercise-accordion-final-v1-q3vucw?file=%2Fsrc%2FApp.js%3A38%2C2
+
+https://codesandbox.io/p/sandbox/react-exercise-accordion-starter-q9rczr?file=%2Fsrc%2Findex.js
