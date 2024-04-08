@@ -1558,3 +1558,9 @@ Right click on the function and refactor, it'll create new file (component)
 https://codesandbox.io/p/sandbox/react-exercise-accordion-final-v1-q3vucw?file=%2Fsrc%2FApp.js%3A38%2C2
 
 https://codesandbox.io/p/sandbox/react-exercise-accordion-starter-q9rczr?file=%2Fsrc%2Findex.js
+
+
+Derived state
+=============
+
+State that is computed from an existing piece of state or from props.
