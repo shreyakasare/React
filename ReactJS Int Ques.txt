@@ -122,6 +122,69 @@ Hooks allow function components to have access to state and other React features
 Because of this, class components are generally no longer needed.
 
 
+1) Hooks
+useState
+useeffect
+useContext
+useReducer
+useMemo
+useCallback
+useRef
+
+2) Higher order component
+What 
+Why 
+When
+How
+
+3) Life cycle methods of component. 
+
+4) State management 
+- State/Props
+- Prop drilling
+- Context 
+
+5) Redux/ Zustand
+How , why, when
+redux toolkit
+
+6) Custom hooks
+
+7) Lazy loading
+- Code splitting
+- Chunking
+- Suspense
+
+8) Virtual DOM
+- reconciliation
+- react fiber
+
+9) SSR and CSRF
+
+10) Routing
+dynamic routing
+
+11) Async task 
+calls
+Promises
+callback hell 
+settimeout
+setinterval
+
+12) Reusability
+
+13) Performance
+
+14) Styling
+
+
+
+
+
+
+
+
+
 
 
 
