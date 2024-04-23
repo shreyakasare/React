@@ -185,6 +185,9 @@ have confused many developers and caused lots of bugs
 React Hooks
 ===========
 
+
+In React, hooks are functions that allow you to use state and other React features in functional components. They were introduced in React 16.8 
+
 React Hooks, plainly put, are functions that let us manage the internal state of components 
 and handle post-rendering side effects directly from our function components. 
 Hooks don�t work inside classes � they let us use fancy React features without classes. 
